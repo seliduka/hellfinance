@@ -1,5 +1,6 @@
 library(tidyverse)
 library(tidyquant)
+library(lubridate)
 tq_transmute_fun_options() %>% str()
 tq_transmute_fun_options()$zoo
 tq_transmute_fun_options()$xts
@@ -7,7 +8,66 @@ tq_transmute_fun_options()$quantmod
 tq_transmute_fun_options()$TTR
 tq_transmute_fun_options()$PerformanceAnalytics
 
-data("FANG")
+#data("FANG")
+########################FANG化##########################
+HU <- getSymbols("3049.tw", auto.assign = FALSE, from = "2017-01-01")
+HU <- HU[(rowSums(is.na(HU)) == 0), ]
+HU <- tail(HU, n = 1008)
+HU <- round(HU, digits = 2)
+HU <- as.data.frame(HU)
+HU <- cbind(date = rownames(HU), HU)
+names = gsub("^........(.*$)", "\\1", names(HU))#點數等於字數
+names(HU) <- tolower(names)
+rownames(HU) <- 1:nrow(HU)
+HU <- cbind(symbol = "HU", HU)
+HU$date <- as.Date(HU$date, format =  "%Y-%m-%d")
+HU <- as.tibble(HU)
+
+########################################################
+CG <- getSymbols("6116.tw", auto.assign = FALSE, from = "2017-01-01")
+CG <- CG[(rowSums(is.na(CG)) == 0), ]
+CG <- tail(CG, n = 1008)
+CG <- round(CG, digits = 2)
+CG <- as.data.frame(CG)
+CG <- cbind(date = rownames(CG), CG)
+names = gsub("^........(.*$)", "\\1", names(CG))#點數等於字數
+names(CG) <- tolower(names)
+rownames(CG) <- 1:nrow(CG)
+CG <- cbind(symbol = "CG", CG)
+CG$date <- as.Date(CG$date, format =  "%Y-%m-%d")
+CG <- as.tibble(CG)
+
+
+UD <- getSymbols("2409.tw", auto.assign = FALSE, from = "2017-01-01")
+UD <- UD[(rowSums(is.na(UD)) == 0), ]
+UD <- tail(UD, n = 1008)
+UD <- round(UD, digits = 2)
+UD <- as.data.frame(UD)
+UD <- cbind(date = rownames(UD), UD)
+names = gsub("^........(.*$)", "\\1", names(UD))#點數等於字數
+names(UD) <- tolower(names)
+rownames(UD) <- 1:nrow(UD)
+UD <- cbind(symbol = "UD", UD)
+UD$date <- as.Date(UD$date, format =  "%Y-%m-%d")
+UD <- as.tibble(UD)
+
+
+CC <- getSymbols("3481.tw", auto.assign = FALSE, from = "2017-01-01")
+CC <- CC[(rowSums(is.na(CC)) == 0), ]
+CC <- tail(CC, n = 1008)
+CC <- round(CC, digits = 2)
+CC <- as.data.frame(CC)
+CC <- cbind(date = rownames(CC), CC)
+names = gsub("^........(.*$)", "\\1", names(CC))#點數等於字數
+names(CC) <- tolower(names)
+rownames(CC) <- 1:nrow(CC)
+CC <- cbind(symbol = "CC", CC)
+CC$date <- as.Date(CC$date, format =  "%Y-%m-%d")
+CC <- as.tibble(CC)
+
+FANG <- rbind(CC, CG, HU, UD)
+
+
 
 FANG_annual_returns <- FANG %>%
   group_by(symbol) %>%
@@ -15,7 +75,7 @@ FANG_annual_returns <- FANG %>%
                mutate_fun = periodReturn,
                period     = "yearly",
                type       = "arithmetic")
-FANG_annual_returns
+FANG_annual_returns#年收益
 
 FANG_annual_returns %>%
   ggplot(aes(x = date, y = yearly.returns, fill = symbol)) +
@@ -27,7 +87,7 @@ FANG_annual_returns %>%
        y = "Annual Returns", x = "") +
   facet_wrap(~ symbol, ncol = 2, scales = "free_y") +
   theme_tq() +
-  scale_fill_tq()
+  scale_fill_tq()#年收益圖表
 
 FANG_daily_log_returns <- FANG %>%
   group_by(symbol) %>%
@@ -45,12 +105,14 @@ FANG_daily_log_returns %>%
   theme_tq() +
   scale_fill_tq() +
   facet_wrap(~ symbol, ncol = 2)
+#每日日誌回報
 
 FANG %>%
   group_by(symbol) %>%
   tq_transmute(select     = open:volume,
                mutate_fun = to.period,
                period     = "months")
+#改成每月回報
 
 FANG_daily <- FANG %>%
   group_by(symbol)
@@ -64,6 +126,7 @@ FANG_daily %>%
   scale_y_continuous(labels = scales::dollar) +
   theme_tq() +
   scale_color_tq()
+#無週期性聚合
 
 FANG_monthly <- FANG %>%
   group_by(symbol) %>%
@@ -80,6 +143,7 @@ FANG_monthly %>%
   scale_y_continuous(labels = scales::dollar) +
   theme_tq() +
   scale_color_tq()
+#每月定期聚合
 
 # Asset Returns
 FANG_returns_monthly <- FANG %>%
@@ -118,6 +182,8 @@ FANG_rolling_corr %>%
   facet_wrap(~ symbol, ncol = 2) +
   theme_tq() +
   scale_color_tq()
+#可視化收益的滾動相關性
+
 
 FANG_macd <- FANG %>%
   group_by(symbol) %>%
@@ -143,6 +209,7 @@ FANG_macd %>%
        y = "MACD", x = "", color = "") +
   theme_tq() +
   scale_color_tq()
+#可視化移動平均收斂散度
 
 FANG_max_by_qtr <- FANG %>%
   group_by(symbol) %>%
@@ -182,6 +249,8 @@ FANG_by_qtr %>%
   scale_y_continuous(labels = scales::dollar) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1),
         axis.title.x = element_blank())
+#獲取每個季度的最高和最低價格
+
 
 stock_prices <- c("MA", "V") %>%
   tq_get(get  = "stock.prices",
@@ -238,6 +307,8 @@ stock_prices %>%
   labs(title = "MA and V: Stock Prices") +
   theme_tq() +
   scale_color_tq()
+#可視化滾動回歸
+
 
 FANG %>%
   group_by(symbol) %>%
@@ -245,7 +316,7 @@ FANG %>%
   tq_transmute(daily.returns, Return.clean, alpha = 0.05) %>%
   tq_transmute(daily.returns, Return.excess, Rf = 0.03 / 252)
 
-
+#清理和計算超額收益
 
 
 

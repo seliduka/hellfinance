@@ -1,27 +1,27 @@
 {
-    "id": "AD4ACA19",
-    "path": "C:/Users/n000174797/Desktop/Research/hellfinance/MATWmovement.R",
-    "project_path": "MATWmovement.R",
+    "id": "A67557F2",
+    "path": "C:/Users/n000174797/Desktop/Research/hellfinance/getTWVAL.R",
+    "project_path": "getTWVAL.R",
     "type": "r_source",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1622605451421.0,
+    "created": 1622613680777.0,
     "source_on_save": false,
     "relative_order": 8,
     "properties": {
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "143,0",
-        "scrollLine": "138"
+        "cursorPosition": "13,51",
+        "scrollLine": "11"
     },
     "folds": "",
-    "lastKnownWriteTime": 1622605713,
+    "lastKnownWriteTime": 1622613740,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1622605713728,
+    "last_content_update": 1622613740419,
     "read_only": false,
     "read_only_alternatives": []
 }
