@@ -10,9 +10,9 @@ tq_transmute_fun_options()$PerformanceAnalytics
 
 #data("FANG")
 ########################FANG化##########################
-HU <- getSymbols("3049.tw", auto.assign = FALSE, from = "2017-01-01")
+HU <- getSymbols("2603.tw", auto.assign = FALSE, from = "2017-01-01")
 HU <- HU[(rowSums(is.na(HU)) == 0), ]
-HU <- tail(HU, n = 1008)
+HU <- tail(HU, n = 100)
 HU <- round(HU, digits = 2)
 HU <- as.data.frame(HU)
 HU <- cbind(date = rownames(HU), HU)
@@ -24,9 +24,9 @@ HU$date <- as.Date(HU$date, format =  "%Y-%m-%d")
 HU <- as.tibble(HU)
 
 ########################################################
-CG <- getSymbols("6116.tw", auto.assign = FALSE, from = "2017-01-01")
+CG <- getSymbols("2609.tw", auto.assign = FALSE, from = "2017-01-01")
 CG <- CG[(rowSums(is.na(CG)) == 0), ]
-CG <- tail(CG, n = 1008)
+CG <- tail(CG, n = 100)
 CG <- round(CG, digits = 2)
 CG <- as.data.frame(CG)
 CG <- cbind(date = rownames(CG), CG)
@@ -38,9 +38,9 @@ CG$date <- as.Date(CG$date, format =  "%Y-%m-%d")
 CG <- as.tibble(CG)
 
 
-UD <- getSymbols("2409.tw", auto.assign = FALSE, from = "2017-01-01")
+UD <- getSymbols("2615.tw", auto.assign = FALSE, from = "2017-01-01")
 UD <- UD[(rowSums(is.na(UD)) == 0), ]
-UD <- tail(UD, n = 1008)
+UD <- tail(UD, n = 100)
 UD <- round(UD, digits = 2)
 UD <- as.data.frame(UD)
 UD <- cbind(date = rownames(UD), UD)
@@ -54,7 +54,7 @@ UD <- as.tibble(UD)
 
 CC <- getSymbols("3481.tw", auto.assign = FALSE, from = "2017-01-01")
 CC <- CC[(rowSums(is.na(CC)) == 0), ]
-CC <- tail(CC, n = 1008)
+CC <- tail(CC, n = 100)
 CC <- round(CC, digits = 2)
 CC <- as.data.frame(CC)
 CC <- cbind(date = rownames(CC), CC)
