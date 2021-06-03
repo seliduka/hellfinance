@@ -16,3 +16,5 @@ MAmovement(stockname, days):取得個股年線、半年線、季線、月線、2
 compairlist(stockname)&COMlist():輸出同類個股曲線
 ![image](https://user-images.githubusercontent.com/13391712/120163153-c89c4980-c22b-11eb-925b-18576d192a1c.png)
 
+MACD
+![image](https://user-images.githubusercontent.com/13391712/120591968-9844ed00-c46f-11eb-94d0-022d3f08823a.png)
