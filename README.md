@@ -17,4 +17,4 @@ compairlist(stockname)&COMlist():輸出同類個股曲線
 ![image](https://user-images.githubusercontent.com/13391712/120163153-c89c4980-c22b-11eb-925b-18576d192a1c.png)
 
 MACD
-![image](https://user-images.githubusercontent.com/13391712/120591968-9844ed00-c46f-11eb-94d0-022d3f08823a.png)
+![image](https://user-images.githubusercontent.com/13391712/120615773-33978b80-c48b-11eb-8c55-dc10f300f58f.png)
