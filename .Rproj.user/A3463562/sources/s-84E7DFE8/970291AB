@@ -1,26 +1,26 @@
 {
-    "id": "DA2172F8",
-    "path": "C:/Users/n000174797/Desktop/Research/hellfinance/MAmovement.R",
-    "project_path": "MAmovement.R",
+    "id": "970291AB",
+    "path": "C:/Users/n000174797/Desktop/Research/hellfinance/getVAL.R",
+    "project_path": "getVAL.R",
     "type": "r_source",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1622533750339.0,
+    "created": 1622533746730.0,
     "source_on_save": false,
-    "relative_order": 3,
+    "relative_order": 2,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "146,25",
-        "scrollLine": "140"
+        "cursorPosition": "16,38",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1622613827,
+    "lastKnownWriteTime": 1622614117,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1622613827920,
+    "last_content_update": 1622614117604,
     "read_only": false,
     "read_only_alternatives": []
 }

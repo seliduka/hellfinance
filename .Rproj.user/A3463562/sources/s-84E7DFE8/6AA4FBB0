@@ -1,27 +1,27 @@
 {
-    "id": "8DE9E32F",
-    "path": "C:/Users/n000174797/Desktop/Research/hellfinance/exampleGROW.R",
-    "project_path": "exampleGROW.R",
+    "id": "6AA4FBB0",
+    "path": "C:/Users/n000174797/Desktop/Research/hellfinance/grow.R",
+    "project_path": "grow.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "288743256",
     "contents": "",
     "dirty": false,
-    "created": 1622602642686.0,
+    "created": 1622593505117.0,
     "source_on_save": false,
     "relative_order": 7,
     "properties": {
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "210,18",
-        "scrollLine": "207"
+        "cursorPosition": "3,12",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1622621026,
+    "lastKnownWriteTime": 1622604642,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1622621026905,
+    "last_content_update": 1622604642008,
     "read_only": false,
     "read_only_alternatives": []
 }
