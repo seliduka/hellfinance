@@ -65,7 +65,33 @@ CC <- cbind(symbol = "彩晶", CC)
 CC$date <- as.Date(CC$date, format =  "%Y-%m-%d")
 CC <- as.tibble(CC)
 
-FANG <- rbind(CC, CG, HU, UD)
+GG <- getSymbols("2603.tw", auto.assign = FALSE, from = "2017-01-01")
+GG <- GG[(rowSums(is.na(GG)) == 0), ]
+GG <- tail(GG, n = 100)
+GG <- round(GG, digits = 2)
+GG <- as.data.frame(GG)
+GG <- cbind(date = rownames(GG), GG)
+names = gsub("^........(.*$)", "\\1", names(GG))#點數等於字數
+names(GG) <- tolower(names)
+rownames(GG) <- 1:nrow(GG)
+GG <- cbind(symbol = "長榮", GG)
+GG$date <- as.Date(GG$date, format =  "%Y-%m-%d")
+GG <- as.tibble(GG)
+
+YY <- getSymbols("2609.tw", auto.assign = FALSE, from = "2017-01-01")
+YY <- YY[(rowSums(is.na(YY)) == 0), ]
+YY <- tail(YY, n = 100)
+YY <- round(YY, digits = 2)
+YY <- as.data.frame(YY)
+YY <- cbind(date = rownames(YY), YY)
+names = gsub("^........(.*$)", "\\1", names(YY))#點數等於字數
+names(YY) <- tolower(names)
+rownames(YY) <- 1:nrow(YY)
+YY <- cbind(symbol = "陽明", YY)
+YY$date <- as.Date(YY$date, format =  "%Y-%m-%d")
+YY <- as.tibble(YY)
+
+FANG <- rbind(CC, CG, HU, UD, GG, YY)
 
 
 

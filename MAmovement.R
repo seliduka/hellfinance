@@ -143,5 +143,5 @@ ggplot(ALL, aes(x=x)) +
 ###############
 getMA("6116.tw")
 
-getTWVAL("^TWII" , 100)
+getTWVAL("^TWII" , 10)
 MAmovement("^TWII" , 180)

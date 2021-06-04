@@ -2,9 +2,20 @@ library(tidyverse)
 library(tidyquant)
 library(lubridate)
 
+HU <- getSymbols("6116.tw", auto.assign = FALSE, from = "2017-01-01")
+HU <- HU[(rowSums(is.na(HU)) == 0), ]
+HU <- tail(HU, n = 200)
+HU <- round(HU, digits = 2)
+HU <- as.data.frame(HU)
+HU <- cbind(date = rownames(HU), HU)
+names = gsub("^........(.*$)", "\\1", names(HU))#點數等於字數
+names(HU) <- tolower(names)
+rownames(HU) <- 1:nrow(HU)
+HU <- cbind(symbol = "GG", HU)
+HU$date <- as.Date(HU$date, format =  "%Y-%m-%d")
+HU <- as.tibble(HU)
 
-
-FANG_macd <- FANG %>%
+FANG_macd <- HU %>%
   group_by(symbol) %>%
   tq_mutate(select     = close,
             mutate_fun = MACD,
@@ -24,7 +35,7 @@ FANG_macd %>%
   geom_line(aes(y = signal), color = "blue", linetype = 2) +
   geom_bar(aes(y = diff), stat = "identity", color = palette_light()[[1]]) +
   facet_wrap(~ symbol, ncol = 2, scale = "free_y") +
-  labs(title = "FANG: Moving Average Convergence Divergence",
+  labs(title = "Moving Average Convergence Divergence",
        y = "MACD", x = "", color = "") +
   theme_tq() +
   scale_color_tq()
