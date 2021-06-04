@@ -1,6 +1,11 @@
 library(tidyverse)
 library(tidyquant)
 library(lubridate)
+library(Cairo)
+library(showtext)
+showtext_auto(enable=T)
+
+
 tq_transmute_fun_options() %>% str()
 tq_transmute_fun_options()$zoo
 tq_transmute_fun_options()$xts
@@ -235,6 +240,8 @@ FANG_macd %>%
        y = "MACD", x = "", color = "") +
   theme_tq() +
   scale_color_tq()
+
+ggsave("ggplot2.pdf",device=cairo_pdf,width=8,height=8)
 #可視化移動平均收斂散度
 
 FANG_max_by_qtr <- FANG %>%
