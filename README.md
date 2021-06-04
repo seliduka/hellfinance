@@ -18,3 +18,18 @@ compairlist(stockname)&COMlist():輸出同類個股曲線
 
 MACD
 ![image](https://user-images.githubusercontent.com/13391712/120615773-33978b80-c48b-11eb-8c55-dc10f300f58f.png)
+
+月線
+![image](https://user-images.githubusercontent.com/13391712/120738262-211c6100-c522-11eb-84fd-5c977d848cb8.png)
+
+日線
+![image](https://user-images.githubusercontent.com/13391712/120738278-2c6f8c80-c522-11eb-87f1-92beef613038.png)
+
+每日報酬
+![image](https://user-images.githubusercontent.com/13391712/120738304-3a251200-c522-11eb-9039-4ba08b7b03b0.png)
+
+年收益
+![image](https://user-images.githubusercontent.com/13391712/120738530-8f612380-c522-11eb-9ce1-420f10bbac65.png)
+
+區段高低價
+![image](https://user-images.githubusercontent.com/13391712/120738214-0cd86400-c522-11eb-8f89-e6c2528d21a2.png)
