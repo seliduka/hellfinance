@@ -3,7 +3,7 @@
     "path": "C:/Users/n000174797/Desktop/Research/hellfinance/auto_long_and_short_ana.R",
     "project_path": "auto_long_and_short_ana.R",
     "type": "r_source",
-    "hash": "2559498434",
+    "hash": "3864469699",
     "contents": "",
     "dirty": false,
     "created": 1623049988594.0,
@@ -14,14 +14,14 @@
         "source_window_id": "",
         "Source": "Source",
         "cursorPosition": "35,0",
-        "scrollLine": "29"
+        "scrollLine": "32"
     },
     "folds": "",
-    "lastKnownWriteTime": 1623055506,
+    "lastKnownWriteTime": 1623055943,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1623055506708,
+    "last_content_update": 1623055943181,
     "read_only": false,
     "read_only_alternatives": []
 }

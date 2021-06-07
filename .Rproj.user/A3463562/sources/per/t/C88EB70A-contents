@@ -12,7 +12,7 @@ thexml <- thexml[-c(14),]
 dday <- nrow(thexml)
 ggplot(thexml, aes(x=date)) + geom_line(aes(y = numb), color = "darkred")
 
-
+dday<- 50
 
 HU <- getSymbols("^TWII", auto.assign = FALSE, from = "2017-01-01")
 HU <- HU[(rowSums(is.na(HU)) == 0), ]
@@ -34,3 +34,6 @@ ggplot(thexml, aes(x=date)) +
   geom_line(aes(y = close), color = "green") +
   geom_line(aes(y = move), color = "blue")
 
+HU$move <- (HU$close-HU$low)*10
+ggplot(HU, aes(x=date)) +
+  geom_line(aes(y = move), color = "blue")
