@@ -1,27 +1,27 @@
 {
-    "id": "EA30982C",
-    "path": "C:/Users/n000174797/Desktop/Research/hellfinance/crawler2.R",
-    "project_path": "crawler2.R",
+    "id": "AB3D57F2",
+    "path": "C:/Users/n000174797/Desktop/Research/hellfinance/auto_long_and_short.R",
+    "project_path": "auto_long_and_short.R",
     "type": "r_source",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1622773781186.0,
+    "created": 1622776436783.0,
     "source_on_save": false,
-    "relative_order": 14,
+    "relative_order": 15,
     "properties": {
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "10,31",
-        "scrollLine": "7"
+        "cursorPosition": "21,0",
+        "scrollLine": "18"
     },
     "folds": "",
-    "lastKnownWriteTime": 1622774404,
+    "lastKnownWriteTime": 1623048772,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1622774404966,
+    "last_content_update": 1623048772484,
     "read_only": false,
     "read_only_alternatives": []
 }

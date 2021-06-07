@@ -2,13 +2,13 @@ library(tidyverse)
 library(tidyquant)
 library(lubridate)
 
-HU <- getSymbols("6116.tw", auto.assign = FALSE, from = "2017-01-01")
+HU <- getSymbols("^TWII", auto.assign = FALSE, from = "2017-01-01")
 HU <- HU[(rowSums(is.na(HU)) == 0), ]
-HU <- tail(HU, n = 200)
+HU <- tail(HU, n = 100)
 HU <- round(HU, digits = 2)
 HU <- as.data.frame(HU)
 HU <- cbind(date = rownames(HU), HU)
-names = gsub("^........(.*$)", "\\1", names(HU))#點數等於字數
+names = gsub("^.....(.*$)", "\\1", names(HU))#點數等於字數
 names(HU) <- tolower(names)
 rownames(HU) <- 1:nrow(HU)
 HU <- cbind(symbol = "GG", HU)
@@ -39,3 +39,4 @@ FANG_macd %>%
        y = "MACD", x = "", color = "") +
   theme_tq() +
   scale_color_tq()
+
