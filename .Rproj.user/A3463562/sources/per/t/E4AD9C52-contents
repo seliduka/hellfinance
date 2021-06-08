@@ -17,7 +17,7 @@ tq_transmute_fun_options()$PerformanceAnalytics
 ########################FANG化##########################
 HU <- getSymbols("2002.tw", auto.assign = FALSE, from = "2017-01-01")
 HU <- HU[(rowSums(is.na(HU)) == 0), ]
-HU <- tail(HU, n = 50)
+HU <- tail(HU, n = 100)
 HU <- round(HU, digits = 2)
 HU <- as.data.frame(HU)
 HU <- cbind(date = rownames(HU), HU)
@@ -31,7 +31,7 @@ HU <- as.tibble(HU)
 ########################################################
 CG <- getSymbols("2009.tw", auto.assign = FALSE, from = "2017-01-01")
 CG <- CG[(rowSums(is.na(CG)) == 0), ]
-CG <- tail(CG, n = 50)
+CG <- tail(CG, n = 100)
 CG <- round(CG, digits = 2)
 CG <- as.data.frame(CG)
 CG <- cbind(date = rownames(CG), CG)
@@ -43,36 +43,36 @@ CG$date <- as.Date(CG$date, format =  "%Y-%m-%d")
 CG <- as.tibble(CG)
 
 
-UD <- getSymbols("2618.tw", auto.assign = FALSE, from = "2017-01-01")
+UD <- getSymbols("2317.tw", auto.assign = FALSE, from = "2017-01-01")
 UD <- UD[(rowSums(is.na(UD)) == 0), ]
-UD <- tail(UD, n = 50)
+UD <- tail(UD, n = 100)
 UD <- round(UD, digits = 2)
 UD <- as.data.frame(UD)
 UD <- cbind(date = rownames(UD), UD)
 names = gsub("^........(.*$)", "\\1", names(UD))#點數等於字數
 names(UD) <- tolower(names)
 rownames(UD) <- 1:nrow(UD)
-UD <- cbind(symbol = "長榮航", UD)
+UD <- cbind(symbol = "鴻海", UD)
 UD$date <- as.Date(UD$date, format =  "%Y-%m-%d")
 UD <- as.tibble(UD)
 
 
-CC <- getSymbols("2601.tw", auto.assign = FALSE, from = "2017-01-01")
+CC <- getSymbols("6116.tw", auto.assign = FALSE, from = "2017-01-01")
 CC <- CC[(rowSums(is.na(CC)) == 0), ]
-CC <- tail(CC, n = 50)
+CC <- tail(CC, n = 100)
 CC <- round(CC, digits = 2)
 CC <- as.data.frame(CC)
 CC <- cbind(date = rownames(CC), CC)
 names = gsub("^........(.*$)", "\\1", names(CC))#點數等於字數
 names(CC) <- tolower(names)
 rownames(CC) <- 1:nrow(CC)
-CC <- cbind(symbol = "華航", CC)
+CC <- cbind(symbol = "彩晶", CC)
 CC$date <- as.Date(CC$date, format =  "%Y-%m-%d")
 CC <- as.tibble(CC)
 
 GG <- getSymbols("2603.tw", auto.assign = FALSE, from = "2017-01-01")
 GG <- GG[(rowSums(is.na(GG)) == 0), ]
-GG <- tail(GG, n = 50)
+GG <- tail(GG, n = 100)
 GG <- round(GG, digits = 2)
 GG <- as.data.frame(GG)
 GG <- cbind(date = rownames(GG), GG)
@@ -85,7 +85,7 @@ GG <- as.tibble(GG)
 
 YY <- getSymbols("2609.tw", auto.assign = FALSE, from = "2017-01-01")
 YY <- YY[(rowSums(is.na(YY)) == 0), ]
-YY <- tail(YY, n = 50)
+YY <- tail(YY, n = 100)
 YY <- round(YY, digits = 2)
 YY <- as.data.frame(YY)
 YY <- cbind(date = rownames(YY), YY)
@@ -236,7 +236,7 @@ FANG_macd %>%
   geom_line(aes(y = signal), color = "blue", linetype = 2) +
   geom_bar(aes(y = diff), stat = "identity", color = palette_light()[[1]]) +
   facet_wrap(~ symbol, ncol = 2, scale = "free_y") +
-  labs(title = "FANG: Moving Average Convergence Divergence",
+  labs(title = "Moving Average Convergence Divergence",
        y = "MACD", x = "", color = "") +
   theme_tq() +
   scale_color_tq()

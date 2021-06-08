@@ -3,7 +3,7 @@
     "path": "C:/Users/n000174797/Desktop/Research/hellfinance/MAmovement.R",
     "project_path": "MAmovement.R",
     "type": "r_source",
-    "hash": "2249959850",
+    "hash": "2624442397",
     "contents": "",
     "dirty": false,
     "created": 1622533750339.0,
@@ -12,15 +12,16 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "134,44",
-        "scrollLine": "131"
+        "cursorPosition": "143,16",
+        "scrollLine": "140",
+        "docOutlineVisible": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1622710825,
+    "lastKnownWriteTime": 1623141283,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1622710825997,
+    "last_content_update": 1623141283677,
     "read_only": false,
     "read_only_alternatives": []
 }
