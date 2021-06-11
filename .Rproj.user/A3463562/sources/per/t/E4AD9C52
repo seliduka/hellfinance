@@ -3,7 +3,7 @@
     "path": "C:/Users/n000174797/Desktop/Research/hellfinance/exampleGROW.R",
     "project_path": "exampleGROW.R",
     "type": "r_source",
-    "hash": "4061253127",
+    "hash": "1751655474",
     "contents": "",
     "dirty": false,
     "created": 1622774866168.0,
@@ -14,14 +14,14 @@
         "source_window_id": "",
         "Source": "Source",
         "cursorPosition": "243,0",
-        "scrollLine": "0"
+        "scrollLine": "239"
     },
     "folds": "",
-    "lastKnownWriteTime": 1623312474,
+    "lastKnownWriteTime": 1623399924,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1623312474837,
+    "last_content_update": 1623399924816,
     "read_only": false,
     "read_only_alternatives": []
 }
