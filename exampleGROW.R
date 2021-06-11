@@ -15,7 +15,7 @@ tq_transmute_fun_options()$PerformanceAnalytics
 
 #data("FANG")
 ########################FANG化##########################
-HU <- getSymbols("2002.tw", auto.assign = FALSE, from = "2017-01-01")
+HU <- getSymbols("2337.tw", auto.assign = FALSE, from = "2017-01-01")
 HU <- HU[(rowSums(is.na(HU)) == 0), ]
 HU <- tail(HU, n = 100)
 HU <- round(HU, digits = 2)
@@ -24,12 +24,12 @@ HU <- cbind(date = rownames(HU), HU)
 names = gsub("^........(.*$)", "\\1", names(HU))#點數等於字數
 names(HU) <- tolower(names)
 rownames(HU) <- 1:nrow(HU)
-HU <- cbind(symbol = "中鋼", HU)
+HU <- cbind(symbol = "旺宏", HU)
 HU$date <- as.Date(HU$date, format =  "%Y-%m-%d")
 HU <- as.tibble(HU)
 
 ########################################################
-CG <- getSymbols("2009.tw", auto.assign = FALSE, from = "2017-01-01")
+CG <- getSymbols("8046.tw", auto.assign = FALSE, from = "2017-01-01")
 CG <- CG[(rowSums(is.na(CG)) == 0), ]
 CG <- tail(CG, n = 100)
 CG <- round(CG, digits = 2)
@@ -38,7 +38,7 @@ CG <- cbind(date = rownames(CG), CG)
 names = gsub("^........(.*$)", "\\1", names(CG))#點數等於字數
 names(CG) <- tolower(names)
 rownames(CG) <- 1:nrow(CG)
-CG <- cbind(symbol = "第一銅", CG)
+CG <- cbind(symbol = "南電", CG)
 CG$date <- as.Date(CG$date, format =  "%Y-%m-%d")
 CG <- as.tibble(CG)
 

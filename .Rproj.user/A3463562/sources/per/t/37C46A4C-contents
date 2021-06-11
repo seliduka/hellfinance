@@ -28,7 +28,7 @@ FANG_macd <- HU %>%
 FANG_macd
 
 FANG_macd %>%
-  filter(date >= as_date("2016-10-01")) %>%
+  filter(date >= as_date("2021-01-01")) %>%
   ggplot(aes(x = date)) +
   geom_hline(yintercept = 0, color = palette_light()[[1]]) +
   geom_line(aes(y = macd, col = symbol)) +

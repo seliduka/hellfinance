@@ -1,96 +1,48 @@
 COMpanel <- function(days){
 library(quantmod)
-getSymbols("2323.tw")
-getSymbols("2340.tw")
-getSymbols("2349.tw")
-getSymbols("2374.tw")
-getSymbols("2406.tw")
 getSymbols("2409.tw")
-getSymbols("2426.tw")
-getSymbols("2438.tw")
-getSymbols("2466.tw")
-getSymbols("2486.tw")
-getSymbols("2489.tw")
-getSymbols("2491.tw")
-getSymbols("3008.tw")
-getSymbols("3019.tw")
-getSymbols("3024.tw")
-getSymbols("3031.tw")
-getSymbols("3038.tw")
-getSymbols("3049.tw")
-getSymbols("3050.tw")
-getSymbols("3051.tw")
-getSymbols("3059.tw")
-getSymbols("3149.tw")
-getSymbols("3356.tw")
-getSymbols("3383.tw")
-getSymbols("3406.tw")
-getSymbols("3437.tw")
-getSymbols("3454.tw")
+#getSymbols("2436.tw") 成長過高
+#getSymbols("2458.tw") 成長過高
+#getSymbols("3049.tw") 低成長
 getSymbols("3481.tw")
-getSymbols("3504.tw")
-getSymbols("3535.tw")
-getSymbols("3543.tw")
-getSymbols("3563.tw")
-getSymbols("3576.tw")
-getSymbols("3591.tw")
-getSymbols("3622.tw")
-getSymbols("3669.tw")
-getSymbols("3673.tw")
-getSymbols("3714.tw")
-getSymbols("4934.tw")
-getSymbols("4935.tw")
-getSymbols("4942.tw")
-getSymbols("4956.tw")
-getSymbols("4960.tw")
-getSymbols("4976.tw")
-getSymbols("5234.tw")
-getSymbols("5243.tw")
-getSymbols("5484.tw")
+getSymbols("3607.tw")
+#getSymbols("3622.tw") 大量級
+#getSymbols("5471.tw") 成長過高
 getSymbols("6116.tw")
-getSymbols("6120.tw")
-getSymbols("6131.tw")
-getSymbols("6164.tw")
-getSymbols("6168.tw")
-getSymbols("6176.tw")
-getSymbols("6209.tw")
-getSymbols("6225.tw")
-getSymbols("6226.tw")
-getSymbols("6278.tw")
-getSymbols("6289.tw")
-getSymbols("6405.tw")
-getSymbols("6431.tw")
-getSymbols("6443.tw")
-getSymbols("6456.tw")
-getSymbols("6477.tw")
-getSymbols("6668.tw")
-getSymbols("6706.tw")
-getSymbols("8104.tw")
-getSymbols("8105.tw")
-getSymbols("8215.tw")
+getSymbols("6243.tw")
 
 
-S1 = data.frame(`2409.TW`)
-S2 = data.frame(`3049.TW`)
-S3 = data.frame(`3481.TW`)
-S4 = data.frame(`6116.TW`)
-S5 = data.frame(`8105.TW`)
+sb = data.frame(`2409.TW`)
+#sc = data.frame(`2436.TW`)
+#sd = data.frame(`2458.TW`)
+#sh = data.frame(`3049.TW`)
+sl = data.frame(`3481.TW`)
+#sr = data.frame(`3622.TW`)
+#sv = data.frame(`5471.TW`)
+sy = data.frame(`6116.TW`)
 
 names = gsub("^........(.*$)", "\\1", names(`2409.TW`))
-names(S1) = names
-names(S2) = names
-names(S3) = names
-names(S4) = names
-names(S5) = names
+names(sb) = names
+#names(sc) = names
+#names(sd) = names
+#names(sh) = names
+names(sl) = names
+#names(sr) = names
+#names(sv) = names
+names(sy) = names
+
 
 # rbind into one dataframe
-S1$label = "S1"
-S2$label = "S2"
-S3$label = "S3"
-S4$label = "S4"
-S5$label = "S5"
+sb$label = "友達"
+#sc$label = "sc"
+#sd$label = "sd"
+#sh$label = "和鑫"
+sl$label = "群創"
+#sr$label = "洋華"
+#sv$label = "sv"
+sy$label = "彩晶"
 
-df = rbind(tail(S1, n = days), tail(S2, n = days), tail(S3, n = days), tail(S4, n = days), tail(S5, n = days))
+df = rbind(tail(sb, n = days), tail(sl, n = days), tail(sy, n = days))
 
 #df = tail(df, n = days)
 # Packages
@@ -108,6 +60,82 @@ geom_line()  +
 scale_colour_discrete(guide = 'none')  +
 geom_dl(aes(label = label), method = list(dl.combine("first.points", "last.points")))
 }
+
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 COMfood <- function(){
   library(quantmod)
   getSymbols('AAPL')

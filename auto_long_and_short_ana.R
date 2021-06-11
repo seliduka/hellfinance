@@ -29,7 +29,7 @@ rownames(HU) <- 1:nrow(HU)
 HU <- cbind(symbol = "GG", HU)
 HU$date <- as.Date(HU$date, format =  "%Y-%m-%d")
 HU <- as.tibble(HU)
-#thexml$move <- ((HU$close-HU$low))*100
+thexml$move <- ((HU$close-HU$low))*100
 #thexml$close <- (HU$close-16500)*50
 thexml$don <- ((HU$high-HU$low)-200)*100
 thexml$up <- ((HU$close-HU$open)-200)*100
@@ -48,17 +48,17 @@ GG <- cbind(symbol = "GG", GG)
 GG$date <- as.Date(GG$date, format =  "%Y-%m-%d")
 GG <- as.tibble(GG)
 
-thexml$GG <- ((GG$close)-100)*3000
+thexml$GG <- ((GG$close)-80)*3000
 
 
 
 ggplot(thexml, aes(x=date)) +
   geom_line(aes(y = numb), color = "darkred", group = 1) +
-  geom_line(aes(x = date-1, y = GG), color = "green", group = 1) +
-  geom_line(aes(x = date-1, y = don), color = "chocolate2", group = 1) +
-  geom_line(aes(x = date-1, y = go), color = "cyan1", group = 1) +
-  geom_line(aes(x = date-1, y = up), color = "plum2", group = 1)
-#  geom_line(aes(x = date-1, y = move), color = "blue", group = 1)
+ # geom_line(aes(x = date, y = GG), color = "green", group = 1) +
+ # geom_line(aes(x = date, y = don), color = "chocolate2", group = 1) +
+ # geom_line(aes(x = date, y = go), color = "cyan1", group = 1) +
+#  geom_line(aes(x = date, y = up), color = "plum2", group = 1)
+  geom_line(aes(x = date-1, y = move), color = "blue", group = 1)
 
 HU$move <- (HU$close-HU$low)*10
 ggplot(HU, aes(x=date)) +

@@ -3,24 +3,24 @@
     "path": "C:/Users/n000174797/Desktop/Research/hellfinance/compairlist.R",
     "project_path": "compairlist.R",
     "type": "r_source",
-    "hash": "2395104798",
+    "hash": "3036090866",
     "contents": "",
     "dirty": false,
     "created": 1622533775898.0,
     "source_on_save": false,
-    "relative_order": 6,
+    "relative_order": 14,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "44,0",
-        "scrollLine": "0"
+        "cursorPosition": "87,0",
+        "scrollLine": "84"
     },
     "folds": "",
-    "lastKnownWriteTime": 1622449926,
+    "lastKnownWriteTime": 1623397451,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1622449926,
+    "last_content_update": 1623397451713,
     "read_only": false,
     "read_only_alternatives": []
 }

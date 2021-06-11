@@ -25,6 +25,8 @@ FANG_macd <- HU %>%
             maType     = SMA) %>%
   mutate(diff = macd - signal) %>%
   select(-(open:volume))
+
+
 FANG_macd
 
 FANG_macd %>%
