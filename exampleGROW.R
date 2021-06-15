@@ -43,7 +43,7 @@ CG$date <- as.Date(CG$date, format =  "%Y-%m-%d")
 CG <- as.tibble(CG)
 
 
-UD <- getSymbols("3622.tw", auto.assign = FALSE, from = "2017-01-01")
+UD <- getSymbols("2330.tw", auto.assign = FALSE, from = "2017-01-01")
 UD <- UD[(rowSums(is.na(UD)) == 0), ]
 UD <- tail(UD, n = 100)
 UD <- round(UD, digits = 2)
@@ -52,12 +52,12 @@ UD <- cbind(date = rownames(UD), UD)
 names = gsub("^........(.*$)", "\\1", names(UD))#點數等於字數
 names(UD) <- tolower(names)
 rownames(UD) <- 1:nrow(UD)
-UD <- cbind(symbol = "洋華", UD)
+UD <- cbind(symbol = "GG", UD)
 UD$date <- as.Date(UD$date, format =  "%Y-%m-%d")
 UD <- as.tibble(UD)
 
 
-CC <- getSymbols("5471.tw", auto.assign = FALSE, from = "2017-01-01")
+CC <- getSymbols("8039.tw", auto.assign = FALSE, from = "2017-01-01")
 CC <- CC[(rowSums(is.na(CC)) == 0), ]
 CC <- tail(CC, n = 100)
 CC <- round(CC, digits = 2)
@@ -66,7 +66,7 @@ CC <- cbind(date = rownames(CC), CC)
 names = gsub("^........(.*$)", "\\1", names(CC))#點數等於字數
 names(CC) <- tolower(names)
 rownames(CC) <- 1:nrow(CC)
-CC <- cbind(symbol = "松瀚", CC)
+CC <- cbind(symbol = "台虹", CC)
 CC$date <- as.Date(CC$date, format =  "%Y-%m-%d")
 CC <- as.tibble(CC)
 

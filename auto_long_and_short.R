@@ -16,10 +16,11 @@ html_attrs(html)
 html_attr(html, "div")
 
 cast <- html_nodes(html, "td:nth-child(7) b")
-cast <- gsub("[^0-9+]", "\\1", cast[1])
+cast <- gsub("[^-0-9+]", "\\1", cast[1])
 cast <- data.frame(date = today(), numb = cast)
 #write.xlsx(cast, file = "more.xlsx", sheetName = "Sheet1", col.names = TRUE, row.names = TRUE, append = FALSE)
 df <- read.xlsx("more.xlsx",sheetName = "Sheet1" )
 df$NA. <- NULL
 write.xlsx(rbind(df, cast), file = "more.xlsx", sheetName = "Sheet1", col.names = TRUE, row.names = TRUE, append = FALSE)
 #每上班日下午14:10分自動執行
+

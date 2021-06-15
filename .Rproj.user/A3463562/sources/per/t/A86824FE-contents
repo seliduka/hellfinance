@@ -1,3 +1,6 @@
+getOption('timeout')
+options(timeout=100)
+
 COMpanel <- function(days){
 library(quantmod)
 getSymbols("2409.tw")
@@ -60,89 +63,12 @@ geom_line()  +
 scale_colour_discrete(guide = 'none')  +
 geom_dl(aes(label = label), method = list(dl.combine("first.points", "last.points")))
 }
+##########################
 
-#
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-COMfood <- function(){
+COMicdesign <- function(){
   library(quantmod)
-  getSymbols('AAPL')
-  getSymbols('FB')
-  getSymbols('AME')
-  getSymbols('CCF')
-  getSymbols('PPT')
+  getSymbols(icdesign)
+
 
   S1 = data.frame(AAPL)
   S2 = data.frame(FB)

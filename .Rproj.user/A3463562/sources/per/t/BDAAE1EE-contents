@@ -9,8 +9,7 @@ library(dplyr)
 #^TWII
 
 panel = c("2349.tw", "2409.tw", "2436.tw", "2458.tw", "2474.tw", "3014.tw", "3038.tw", "3049.tw", "3227.tw", "3390.tw", "3416.tw", "3481.tw", "3523.tw", "3545.tw", "3556.tw", "3607.tw", "3615.tw", "3622.tw", "3623.tw", "3673.tw", "4729.tw", "5471.tw", "5487.tw", "6153.tw", "6116.tw", "6243.tw", "6251.tw", "6269.tw", "8049.tw", "8105.tw")
-icdesign = c("3014.tw", "3545.tw" )
-
+icdesign = c("2363.tw","2379.tw","2388.tw","2401.tw","2436.tw","2454.tw","2458.tw","3006.tw", "3014.tw","3034.tw","3035.tw","3041.tw","3094.tw","3169.tw","3219.tw","3227.tw","3228.tw","3268.tw","3288.tw","3317.tw","3443.tw","3527.tw","3530.tw", "3545.tw","3588.tw","5302.tw","5314.tw","5351.tw","5468.tw","5471.tw")
 food = c("1201.tw", "1203.tw", "1210.tw", "1213.tw", "1215.tw", "1216.tw", "1217.tw", "1218.tw", "1219.tw", "1220.tw", "1225.tw", "1227.tw", "1229.tw", "1231.tw", "1232.tw", "1233.tw", "1234.tw", "1235.tw", "1236.tw", "1256.tw")
 cement = c("1101.tw", "1102.tw", "1103.tw", "1104.tw", "1108.tw", "1109.tw", "1110.tw")
 plastic = c("1301.tw", "1303.tw", "1301.tw", "1303.tw", "1304.tw", "1305.tw", "1307.tw", "1308.tw", "1309.tw", "1310.tw", "1312.tw", "1313.tw", "1314.tw", "1315.tw", "1321.tw", "1323.tw", "1324.tw", "1325.tw", "1326.tw", "1337.tw", "1340.tw", "1341.tw", "4306.tw")
@@ -46,6 +45,7 @@ cultural = c()
 agricultural = c()
 
 if(stna %in% panel){GG <- COMpanel(days)}#面板光電
+if(stna %in% icdesign){GG <- COMicdesign(days)}
 if(stna %in% food){COMfood()}#食品
 if(stna %in% cement){COMcement()}#水泥
 if(stna %in% plastic){COMplastic()}#塑膠
@@ -84,7 +84,7 @@ print(GG)
 }
 
 panel
-compairlist("2409.tw", 180)
+compairlist("2409.tw", 60)
 
 
 
