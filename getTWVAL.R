@@ -29,6 +29,7 @@ getTWVAL <- function(sto, dayss){
     xlab("days") + ylab("amount")
 }
 
+getTWVAL("^TWII", 60)
 ###################another###################
 #buffer2 <- data.frame(AAPL)
 #buffer2 <- buffer[(rowSums(is.na(buffer2)) == 0), ]

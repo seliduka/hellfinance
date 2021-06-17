@@ -65,33 +65,66 @@ geom_dl(aes(label = label), method = list(dl.combine("first.points", "last.point
 }
 ##########################
 
-COMicdesign <- function(){
+COMicdesign <- function(days){
   library(quantmod)
   getSymbols(icdesign)
 
+  sa<- icdesign[1]
+  sb<- icdesign[2]
+  sc<- icdesign[3]
+  sd<- icdesign[4]
+  se<- icdesign[5]
+#  sf<- icdesign[6]
+  sg<- icdesign[7]
+  sh<- icdesign[8]
+  si<- icdesign[9]
+  sj<- icdesign[10]
+  sk<- icdesign[11]
+  sl<- icdesign[12]
 
-  S1 = data.frame(AAPL)
-  S2 = data.frame(FB)
-  S3 = data.frame(AME)
-  S4 = data.frame(CCF)
-  S5 = data.frame(PPT)
 
-  names = gsub("^FB\\.(.*$)", "\\1", names(FB))
-  names(S1) = names
-  names(S2) = names
-  names(S3) = names
-  names(S4) = names
-  names(S5) = names
+  sa = data.frame(get(sa))
+  sb = data.frame(get(sb))
+  sc = data.frame(get(sc))
+  sd = data.frame(get(sd))
+  se = data.frame(get(se))
+#  sf = data.frame(get(sf))
+  sg = data.frame(get(sg))
+  sh = data.frame(get(sh))
+  si = data.frame(get(si))
+  sj = data.frame(get(sj))
+  sk = data.frame(get(sk))
+  sl = data.frame(get(sl))
+
+  names = gsub("^........(.*$)", "\\1", names(`2363.TW`))
+  names(sa) = names
+  names(sb) = names
+  names(sc) = names
+  names(sd) = names
+  names(se) = names
+ # names(sf) = names
+  names(sg) = names
+  names(sh) = names
+  names(si) = names
+  names(sj) = names
+  names(sk) = names
+  names(sl) = names
 
   # rbind into one dataframe
-  S1$label = "S1"
-  S2$label = "S2"
-  S3$label = "S3"
-  S4$label = "S4"
-  S5$label = "S5"
+  sa$label = "sa"
+  sb$label = "sb"
+  sc$label = "sc"
+  sd$label = "sd"
+  se$label = "se"
+ # sf$label = "sf"
+  sg$label = "sg"
+  sh$label = "sh"
+  si$label = "si"
+  sj$label = "sj"
+  sk$label = "sk"
+  sl$label = "sl"
 
-
-  df = rbind(S1, S2, S3, S4, S5)
+  df = rbind(tail(sa, n = days), tail(sb, n = days), tail(sc, n = days), tail(sd, n = days), tail(se, n = days), tail(sg, n = days), tail(sh, n = days), tail(si, n = days), tail(sj, n = days), tail(sk, n = days), tail(sl, n = days))
 
 
   # Packages
@@ -110,6 +143,8 @@ COMicdesign <- function(){
     geom_dl(aes(label = label), method = list(dl.combine("first.points", "last.points")))
   return(GG)
 }
+#######################################################
+#
 COMcement <- function(){
   library(quantmod)
   getSymbols('AAPL')
@@ -1598,4 +1633,4 @@ COMagricultural <- function(){
     geom_dl(aes(label = label), method = list(dl.combine("first.points", "last.points")))
   return(GG)
 }
-
+COMsemiconductor()

@@ -35,22 +35,7 @@ thexml$don <- ((HU$high-HU$low)-200)*100
 thexml$up <- ((HU$close-HU$open)-200)*100
 thexml$go <- (HU$open-16500)*50
 
-GG <- getSymbols("2603.tw", auto.assign = FALSE, from = "2017-01-01")
-GG <- GG[(rowSums(is.na(GG)) == 0), ]
-GG <- tail(GG, n = dday)
-GG <- round(GG, digits = 2)
-GG <- as.data.frame(GG)
-GG <- cbind(date = rownames(GG), GG)
-names = gsub("^........(.*$)", "\\1", names(GG))#點數等於字數
-names(GG) <- tolower(names)
-rownames(GG) <- 1:nrow(GG)
-GG <- cbind(symbol = "GG", GG)
-GG$date <- as.Date(GG$date, format =  "%Y-%m-%d")
-GG <- as.tibble(GG)
-
-thexml$GG <- ((GG$close)-80)*3000
-
-
+cor.test(thexml$numb,thexml$move)
 
 ggplot(thexml, aes(x=date)) +
   geom_line(aes(y = numb), color = "darkred", group = 1) +

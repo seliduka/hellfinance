@@ -4,7 +4,7 @@ library(dplyr) # 非常強大的資料處理套件
 library(lubridate) # 處理日期變數的套件
 library(stringr) # 處理字串的套件
 library(xlsx)
-
+#######################################
 getOption('timeout')
 options(timeout=100)
 
