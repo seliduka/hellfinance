@@ -33,3 +33,9 @@ MACD
 
 區段高低價
 ![image](https://user-images.githubusercontent.com/13391712/120738214-0cd86400-c522-11eb-8f89-e6c2528d21a2.png)
+
+auto_MACDTWII:台股大盤MACD
+![image](https://user-images.githubusercontent.com/13391712/122500146-cd7f3c80-d024-11eb-86e2-829425891a6c.png)
+
+auto_long_and_short_ana:外資多空金額與收盤-最低關係圖
+![image](https://user-images.githubusercontent.com/13391712/122500209-f0115580-d024-11eb-8c93-d14c41f2874c.png)
