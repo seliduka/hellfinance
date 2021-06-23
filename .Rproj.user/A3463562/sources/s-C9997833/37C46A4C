@@ -1,27 +1,27 @@
 {
-    "id": "BA9A0A23",
-    "path": "C:/Users/n000174797/Desktop/Research/hellfinance/group_MACD.R",
-    "project_path": "group_MACD.R",
+    "id": "37C46A4C",
+    "path": "C:/Users/n000174797/Desktop/Research/hellfinance/auto_MACDTWII.R",
+    "project_path": "auto_MACDTWII.R",
     "type": "r_source",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1623389652213.0,
+    "created": 1622704404218.0,
     "source_on_save": false,
-    "relative_order": 16,
+    "relative_order": 12,
     "properties": {
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "124,0",
-        "scrollLine": "118"
+        "cursorPosition": "41,0",
+        "scrollLine": "35"
     },
     "folds": "",
-    "lastKnownWriteTime": 1624004616,
+    "lastKnownWriteTime": 1624408971,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1624004616160,
+    "last_content_update": 1624408971769,
     "read_only": false,
     "read_only_alternatives": []
 }

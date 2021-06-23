@@ -1,27 +1,27 @@
 {
-    "id": "A66EB6C1",
-    "path": "C:/Users/n000174797/Desktop/Research/hellfinance/MACD_TWII_forecast.R",
-    "project_path": "MACD_TWII_forecast.R",
+    "id": "BA9A0A23",
+    "path": "C:/Users/n000174797/Desktop/Research/hellfinance/group_MACD.R",
+    "project_path": "group_MACD.R",
     "type": "r_source",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1623370650083.0,
+    "created": 1623389652213.0,
     "source_on_save": false,
-    "relative_order": 13,
+    "relative_order": 16,
     "properties": {
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "4,50",
-        "scrollLine": "0"
+        "cursorPosition": "124,0",
+        "scrollLine": "118"
     },
     "folds": "",
-    "lastKnownWriteTime": 1623373221,
+    "lastKnownWriteTime": 1624427669,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1623373221348,
+    "last_content_update": 1624427669645,
     "read_only": false,
     "read_only_alternatives": []
 }

@@ -250,37 +250,51 @@ COMcement <- function(days){
   return(GG)
 }
 ###########################################
-COMplastic <- function(){
+COMplastic <- function(days){
   library(quantmod)
-  getSymbols('AAPL')
-  getSymbols('FB')
-  getSymbols('AME')
-  getSymbols('CCF')
-  getSymbols('PPT')
+  plastic = c("1301.TW", "1303.TW", "1304.TW", "1305.TW", "1307.TW", "1308.TW", "1309.TW", "1310.TW", "1312.TW", "1313.TW", "1314.TW", "1315.TW", "1321.TW", "1323.TW", "1324.TW", "1325.TW", "1326.TW", "1337.TW", "1340.TW", "1341.TW", "1342.TW", "4306.TW")
+  getSymbols(plastic)
+  sa = plastic[1]
+  sb = plastic[2]
+  sc = plastic[3]
+  sd = plastic[4]
+  sf = plastic[6]
+  sl = plastic[12]
+  sp = plastic[16]
+  st = plastic[20]
 
-  S1 = data.frame(AAPL)
-  S2 = data.frame(FB)
-  S3 = data.frame(AME)
-  S4 = data.frame(CCF)
-  S5 = data.frame(PPT)
+  sa = data.frame(get(sa))
+  sb = data.frame(get(sb))
+  sc = data.frame(get(sc))
+  sd = data.frame(get(sd))
+  sf = data.frame(get(sf))
+  sl = data.frame(get(sl))
+  sp = data.frame(get(sp))
+  st = data.frame(get(st))
 
-  names = gsub("^FB\\.(.*$)", "\\1", names(FB))
-  names(S1) = names
-  names(S2) = names
-  names(S3) = names
-  names(S4) = names
-  names(S5) = names
+  names = gsub("^........(.*$)", "\\1", names(`1301.TW`))
+
+  names(sa) = names
+  names(sb) = names
+  names(sc) = names
+  names(sd) = names
+  names(sf) = names
+  names(sl) = names
+  names(sp) = names
+  names(st) = names
 
   # rbind into one dataframe
-  S1$label = "S1"
-  S2$label = "S2"
-  S3$label = "S3"
-  S4$label = "S4"
-  S5$label = "S5"
 
+  sa$label = "sa"
+  sb$label = "sb"
+  sc$label = "sc"
+  sd$label = "sd"
+  sf$label = "sf"
+  sl$label = "sl"
+  sp$label = "sp"
+  st$label = "st"
 
-  df = rbind(S1, S2, S3, S4, S5)
-
+  df = rbind(tail(sa, n = days),tail(sb, n = days),tail(sc, n = days),tail(sd, n = days),tail(sf, n = days),tail(sl, n = days),tail(sp, n = days),tail(st, n = days))
 
   # Packages
   library(ggplot2)
@@ -298,6 +312,8 @@ COMplastic <- function(){
     geom_dl(aes(label = label), method = list(dl.combine("first.points", "last.points")))
   return(GG)
 }
+#################################################
+
 COMtextile <- function(){
   library(quantmod)
   getSymbols('AAPL')

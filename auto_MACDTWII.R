@@ -4,7 +4,7 @@ library(lubridate)
 
 HU <- getSymbols("^TWII", auto.assign = FALSE, from = "2017-01-01")
 HU <- HU[(rowSums(is.na(HU)) == 0), ]
-HU <- tail(HU, n = 75)
+HU <- tail(HU, n = 356)
 HU <- round(HU, digits = 2)
 HU <- as.data.frame(HU)
 HU <- cbind(date = rownames(HU), HU)
@@ -28,7 +28,7 @@ FANG_macd <- HU %>%
 FANG_macd
 
 FANG_macd %>%
-  filter(date >= as_date("2021-01-01")) %>%
+  filter(date >= as_date("2020-01-01")) %>%
   ggplot(aes(x = date)) +
   geom_hline(yintercept = 0, color = palette_light()[[1]]) +
   geom_line(aes(y = macd, col = symbol)) +

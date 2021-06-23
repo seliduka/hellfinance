@@ -12,7 +12,7 @@ panel = c("2349.TW", "2409.TW", "2436.TW", "2458.TW", "2474.TW", "3014.TW", "303
 icdesign = c("3006.TW", "3014.TW","3035.TW","3094.TW", "3443.TW", "3545.TW","3588.TW","4961.TW","5471.TW")
 food = c("1201.TW", "1203.TW", "1210.TW", "1213.TW", "1215.TW", "1216.TW", "1217.TW", "1218.TW", "1219.TW", "1220.TW", "1225.TW", "1227.TW", "1229.TW", "1231.TW", "1232.TW", "1233.TW", "1234.TW", "1235.TW", "1236.TW", "1256.TW")
 cement = c("1101.TW", "1102.TW", "1103.TW", "1104.TW", "1108.TW", "1109.TW", "1110.TW")
-plastic = c("1301.TW", "1303.TW", "1301.TW", "1303.TW", "1304.TW", "1305.TW", "1307.TW", "1308.TW", "1309.TW", "1310.TW", "1312.TW", "1313.TW", "1314.TW", "1315.TW", "1321.TW", "1323.TW", "1324.TW", "1325.TW", "1326.TW", "1337.TW", "1340.TW", "1341.TW", "4306.TW")
+plastic = c("1301.TW", "1303.TW", "1304.TW", "1305.TW", "1307.TW", "1308.TW", "1309.TW", "1310.TW", "1312.TW", "1313.TW", "1314.TW", "1315.TW", "1321.TW", "1323.TW", "1324.TW", "1325.TW", "1326.TW", "1337.TW", "1340.TW", "1341.TW", "1342.TW", "4306.TW")
 textile = c("1402.TW", "1409.TW", "1410.TW", "1413.TW", "1414.TW", "1417.TW", "1418.TW", "1419.TW", "1423.TW", "1434.TW", "1439.TW", "1440.TW", "1441.TW", "1443.TW", "1444.TW", "1445.TW", "1446.TW", "1447.TW", "1449.TW", "1451.TW", "1452.TW", "1453.TW", "1454.TW", "1455.TW", "1456.TW", "1457.TW", "1459.TW", "1460.TW", "1463.TW", "1464.TW", "1465.TW", "1466.TW", "1467.TW", "1468.TW", "1470.TW", "1472.TW", "1473.TW", "1474.TW", "1475.TW", "1476.TW", "1477.TW", "4414.TW", "4426.TW", "4438.TW", "4439.TW")
 machinery = c("1503.TW", "1504.TW", "1506.TW", "1507.TW", "1513.TW", "1514.TW", "1515.TW", "1517.TW", "1519.TW", "1526.TW", "1527.TW", "1528.TW", "1529.TW", "1530.TW", "1531.TW", "1532.TW", "1535.TW", "1537.TW", "1538.TW", "1539.TW", "1540.TW", "1541.TW", "1558.TW", "1560.TW", "1583.TW", "1589.TW", "1590.TW", "1597.TW", "2049.TW", "2241.TW", "2371.TW", "3167.TW", "4526.TW", "4532.TW", "4540.TW", "4552.TW", "4555.TW", "4560.TW", "4562.TW", "4564.TW", "4566.TW", "4571.TW", "4572.TW", "4576.TW", "5288.TW", "8222.TW", "8374.TW", "8996.TW")
 electrical = c("1603.TW", "1604.TW", "1605.TW", "1608.TW", "1609.TW", "1611.TW", "1612.TW", "1614.TW", "1615.TW", "1616.TW", "1617.TW", "1618.TW", "1626.TW", "4930.TW", "5283.TW")
@@ -50,7 +50,7 @@ if(stna %in% panel){GG <- COMpanel(days)}#面板光電
 if(stna %in% icdesign){GG <- COMicdesign(days)}#IC設計
 if(stna %in% food){GG <- COMfood(days)}#食品
 if(stna %in% cement){GG <-COMcement(days)}#水泥
-if(stna %in% plastic){COMplastic()}#塑膠
+if(stna %in% plastic){GG <- COMplastic(days)}#塑膠
 if(stna %in% textile){COMtextile()}#紡織
 if(stna %in% machinery){COMmachinery()}#機械
 if(stna %in% electrical){COMelectrical()}#電器
@@ -85,8 +85,7 @@ if(stna %in% agricultural){COMagricultural()}#農業
 print(GG)
 }
 
-panel
-compairlist("3006.TW", 100)
+compairlist("1301.TW", 110)
 
 
 
