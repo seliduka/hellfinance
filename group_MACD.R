@@ -96,7 +96,20 @@ YY <- cbind(symbol = "通嘉", YY)
 YY$date <- as.Date(YY$date, format =  "%Y-%m-%d")
 YY <- as.tibble(YY)
 
-FANG <- rbind(CC, CG, HU, UD, GG, YY)
+rr <- getSymbols("2458.tw", auto.assign = FALSE, from = "2017-01-01")
+rr <- rr[(rowSums(is.na(rr)) == 0), ]
+rr <- tail(rr, n = 100)
+rr <- round(rr, digits = 2)
+rr <- as.data.frame(rr)
+rr <- cbind(date = rownames(rr), rr)
+names = gsub("^........(.*$)", "\\1", names(rr))#點數等於字數
+names(rr) <- tolower(names)
+rownames(rr) <- 1:nrow(rr)
+rr <- cbind(symbol = "義隆", rr)
+rr$date <- as.Date(rr$date, format =  "%Y-%m-%d")
+rr <- as.tibble(rr)
+
+FANG <- rbind(CC, CG, HU, UD, GG, YY, rr)
 
 FANG_macd <- FANG %>%
   group_by(symbol) %>%
