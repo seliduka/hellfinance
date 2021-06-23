@@ -285,14 +285,14 @@ COMplastic <- function(days){
 
   # rbind into one dataframe
 
-  sa$label = "sa"
-  sb$label = "sb"
-  sc$label = "sc"
-  sd$label = "sd"
-  sf$label = "sf"
-  sl$label = "sl"
-  sp$label = "sp"
-  st$label = "st"
+  sa$label = "台塑"
+  sb$label = "南亞"
+  sc$label = "台聚"
+  sd$label = "華夏"
+  sf$label = "亞聚"
+  sl$label = "達新"
+  sp$label = "恆大"
+  st$label = "富林"
 
   df = rbind(tail(sa, n = days),tail(sb, n = days),tail(sc, n = days),tail(sd, n = days),tail(sf, n = days),tail(sl, n = days),tail(sp, n = days),tail(st, n = days))
 
