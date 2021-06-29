@@ -4,7 +4,7 @@ library(lubridate)
 
 HU <- getSymbols("^TWII", auto.assign = FALSE, from = "2017-01-01")
 HU <- HU[(rowSums(is.na(HU)) == 0), ]
-HU <- tail(HU, n = 356)
+HU <- tail(HU, n = 100)
 HU <- round(HU, digits = 2)
 HU <- as.data.frame(HU)
 HU <- cbind(date = rownames(HU), HU)

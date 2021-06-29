@@ -83,7 +83,7 @@ GG <- cbind(symbol = "益航", GG)
 GG$date <- as.Date(GG$date, format =  "%Y-%m-%d")
 GG <- as.tibble(GG)
 
-YY <- getSymbols("1423.tw", auto.assign = FALSE, from = "2017-01-01")
+YY <- getSymbols("6116.tw", auto.assign = FALSE, from = "2017-01-01")
 YY <- YY[(rowSums(is.na(YY)) == 0), ]
 YY <- tail(YY, n = 100)
 YY <- round(YY, digits = 2)
@@ -92,7 +92,7 @@ YY <- cbind(date = rownames(YY), YY)
 names = gsub("^........(.*$)", "\\1", names(YY))#點數等於字數
 names(YY) <- tolower(names)
 rownames(YY) <- 1:nrow(YY)
-YY <- cbind(symbol = "利華", YY)
+YY <- cbind(symbol = "彩晶", YY)
 YY$date <- as.Date(YY$date, format =  "%Y-%m-%d")
 YY <- as.tibble(YY)
 

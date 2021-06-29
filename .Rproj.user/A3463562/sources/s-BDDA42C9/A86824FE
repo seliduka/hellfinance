@@ -1,26 +1,26 @@
 {
-    "id": "BDAAE1EE",
-    "path": "C:/Users/n000174797/Desktop/Research/hellfinance/compairlist.R",
-    "project_path": "compairlist.R",
+    "id": "A86824FE",
+    "path": "C:/Users/n000174797/Desktop/Research/hellfinance/COMlist.R",
+    "project_path": "COMlist.R",
     "type": "r_source",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1622533775898.0,
+    "created": 1622533756877.0,
     "source_on_save": false,
-    "relative_order": 14,
+    "relative_order": 15,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "87,0",
-        "scrollLine": "83"
+        "cursorPosition": "609,0",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1624437173,
+    "lastKnownWriteTime": 1624437114,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1624437173917,
+    "last_content_update": 1624437114876,
     "read_only": false,
     "read_only_alternatives": []
 }

@@ -51,3 +51,4 @@ ggplot(thexml, aes(x=date)) +
 #  geom_line(aes(y = move), color = "blue")
 
 
+

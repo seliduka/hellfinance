@@ -6,13 +6,12 @@ library(lubridate)
 library(ggplot2)
 library(babynames)
 library(dplyr)
-
 #rm(list = ls())
 
 AAPL = getSymbols(sto, auto.assign = FALSE)
 buffer <- data.frame(AAPL)
 buffer <- buffer[(rowSums(is.na(buffer)) == 0), ]
-names = gsub("^.........(.*$)", "\\1", names(AAPL))#點數等於字數
+names = gsub("^........(.*$)", "\\1", names(AAPL))#點數等於字數
 names(buffer) <- names
 buffer$tag <- ifelse(buffer$Open > buffer$Close, buffer$tag <- "down", buffer$tag <- "up")
 buffer$Volume <- ifelse(buffer$tag == "down", buffer$Volume*(-1), buffer$Volume)

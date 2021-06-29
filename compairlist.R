@@ -90,3 +90,4 @@ compairlist("3006.TW", 110)
 
 
 
+
