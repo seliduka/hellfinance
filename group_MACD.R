@@ -76,7 +76,7 @@ GG <- tail(GG, n = 100)
 GG <- round(GG, digits = 2)
 GG <- as.data.frame(GG)
 GG <- cbind(date = rownames(GG), GG)
-names = gsub("^........(.*$)", "\\1", names(GG))#點數等於字數
+names = gsub("^^........(.*$)", "\\1", names(GG))#點數等於字數
 names(GG) <- tolower(names)
 rownames(GG) <- 1:nrow(GG)
 GG <- cbind(symbol = "敦泰", GG)
@@ -109,7 +109,8 @@ rr <- cbind(symbol = "義隆", rr)
 rr$date <- as.Date(rr$date, format =  "%Y-%m-%d")
 rr <- as.tibble(rr)
 
-FANG <- rbind(CG,CC, CG, HU, UD, GG, YY, rr)
+FANG <- rbind(CG,UD, GG)
+            #  CC, CG, HU, UD, YY, rr)
 
 FANG_macd <- FANG %>%
   group_by(symbol) %>%

@@ -15,7 +15,7 @@ tq_transmute_fun_options()$PerformanceAnalytics
 
 #data("FANG")
 ########################FANG化##########################
-HU <- getSymbols("1303.tw", auto.assign = FALSE, from = "2017-01-01")
+HU <- getSymbols("2009.tw", auto.assign = FALSE, from = "2017-01-01")
 HU <- HU[(rowSums(is.na(HU)) == 0), ]
 HU <- tail(HU, n = 100)
 HU <- round(HU, digits = 2)
@@ -24,7 +24,7 @@ HU <- cbind(date = rownames(HU), HU)
 names = gsub("^........(.*$)", "\\1", names(HU))#點數等於字數
 names(HU) <- tolower(names)
 rownames(HU) <- 1:nrow(HU)
-HU <- cbind(symbol = "塑膠-南亞", HU)
+HU <- cbind(symbol = "第一銅", HU)
 HU$date <- as.Date(HU$date, format =  "%Y-%m-%d")
 HU <- as.tibble(HU)
 
@@ -96,7 +96,7 @@ YY <- cbind(symbol = "紙-正隆", YY)
 YY$date <- as.Date(YY$date, format =  "%Y-%m-%d")
 YY <- as.tibble(YY)
 
-rr <- getSymbols("1304.tw", auto.assign = FALSE, from = "2017-01-01")
+rr <- getSymbols("6116.tw", auto.assign = FALSE, from = "2017-01-01")
 rr <- rr[(rowSums(is.na(rr)) == 0), ]
 rr <- tail(rr, n = 100)
 rr <- round(rr, digits = 2)
@@ -105,11 +105,11 @@ rr <- cbind(date = rownames(rr), rr)
 names = gsub("^........(.*$)", "\\1", names(rr))#點數等於字數
 names(rr) <- tolower(names)
 rownames(rr) <- 1:nrow(rr)
-rr <- cbind(symbol = "台聚", rr)
+rr <- cbind(symbol = "彩晶", rr)
 rr$date <- as.Date(rr$date, format =  "%Y-%m-%d")
 rr <- as.tibble(rr)
 
-FANG <- rbind(CC, CG, HU, UD, GG, YY, rr)
+FANG <- rbind( HU,CC, CG,UD, GG, YY, rr)
 
 FANG_macd <- FANG %>%
   group_by(symbol) %>%

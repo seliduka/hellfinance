@@ -40,3 +40,4 @@ FANG_macd %>%
   theme_tq() +
   scale_color_tq()
 
+

@@ -43,7 +43,7 @@ ggplot(thexml, aes(x=date)) +
  # geom_line(aes(x = date, y = don), color = "chocolate2", group = 1) +
  # geom_line(aes(x = date, y = go), color = "cyan1", group = 1) +
 #  geom_line(aes(x = date, y = up), color = "plum2", group = 1)
-  geom_line(aes(x = date-1, y = move), color = "blue", group = 1) +
+  geom_line(aes(x = date-2, y = move), color = "blue", group = 1) +
   ggtitle("foreign investment LS & close-low \n relationship lines")
 
 #HU$move <- (HU$close-HU$low)*10

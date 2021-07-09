@@ -3,25 +3,25 @@
     "path": "C:/Users/n000174797/Desktop/Research/hellfinance/MACD_TWII_forecast.R",
     "project_path": "MACD_TWII_forecast.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "1383819209",
     "contents": "",
     "dirty": false,
     "created": 1623370650083.0,
     "source_on_save": false,
-    "relative_order": 13,
+    "relative_order": 12,
     "properties": {
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "4,46",
-        "scrollLine": "0"
+        "cursorPosition": "42,0",
+        "scrollLine": "36"
     },
     "folds": "",
-    "lastKnownWriteTime": 1623373221,
+    "lastKnownWriteTime": 1625813155,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1623373221348,
+    "last_content_update": 1625813155637,
     "read_only": false,
     "read_only_alternatives": []
 }

@@ -319,37 +319,55 @@ COMplastic <- function(days){
 }
 #################################################
 
-COMtextile <- function(){
+COMtextile <- function(days){
   library(quantmod)
-  getSymbols('AAPL')
-  getSymbols('FB')
-  getSymbols('AME')
-  getSymbols('CCF')
-  getSymbols('PPT')
+  textile = c("8429.TW", "1455.TW","1440.TW", "8404.TW", "1459.TW", "1443.TW", "1418.TW", "1452.TW", "1476.TW")
+  getSymbols(textile)
+  sa = textile[1]
+  sb = textile[2]
+  sc = textile[3]
+  sd = textile[4]
+  se = textile[5]
+  sf = textile[6]
+  sg = textile[7]
+  sh = textile[8]
+#  si = textile[9]
 
-  S1 = data.frame(AAPL)
-  S2 = data.frame(FB)
-  S3 = data.frame(AME)
-  S4 = data.frame(CCF)
-  S5 = data.frame(PPT)
+  sa = data.frame(get(sa))
+  sb = data.frame(get(sb))
+  sc = data.frame(get(sc))
+  sd = data.frame(get(sd))
+  se = data.frame(get(se))
+  sf = data.frame(get(sf))
+  sg = data.frame(get(sg))
+  sh = data.frame(get(sh))
+#  si = data.frame(get(si))
 
-  names = gsub("^FB\\.(.*$)", "\\1", names(FB))
-  names(S1) = names
-  names(S2) = names
-  names(S3) = names
-  names(S4) = names
-  names(S5) = names
+  names = gsub("^........(.*$)", "\\1", names(`8429.TW`))
+
+  names(sa) = names
+  names(sb) = names
+  names(sc) = names
+  names(sd) = names
+  names(se) = names
+  names(sf) = names
+  names(sg) = names
+  names(sh) = names
+#  names(si) = names
 
   # rbind into one dataframe
-  S1$label = "S1"
-  S2$label = "S2"
-  S3$label = "S3"
-  S4$label = "S4"
-  S5$label = "S5"
 
+  sa$label = "金麗-KY"
+  sb$label = "集盛"
+  sc$label = "南紡"
+  sd$label = "百和興業-KY"
+  se$label = "聯發"
+  sf$label = "立益"
+  sg$label = "東華"
+  sh$label = "宏益"
+  #si$label = "儒鴻"
 
-  df = rbind(S1, S2, S3, S4, S5)
-
+  df = rbind(tail(sa, n = days),tail(sb, n = days),tail(sc, n = days),tail(sd, n = days),tail(se, n = days),tail(sf, n = days),tail(sg, n = days),tail(sh, n = days))
 
   # Packages
   library(ggplot2)
