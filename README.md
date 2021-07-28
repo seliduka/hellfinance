@@ -38,6 +38,7 @@ auto_MACDTWII:台股大盤MACD
 ![image](https://user-images.githubusercontent.com/13391712/122500146-cd7f3c80-d024-11eb-86e2-829425891a6c.png)
 
 auto_long_and_short:將每日多空金額寫至more.xlsx
+
 ![image](https://user-images.githubusercontent.com/13391712/127276987-bf3382c6-47ce-4a9a-a01e-a878747a4aae.png)
 
 auto_long_and_short_ana:外資多空金額與收盤-最低關係圖
