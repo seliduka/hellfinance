@@ -141,7 +141,7 @@ ggplot(ALL, aes(x=x)) +
 }
 
 ###############
-getMA("4961.tw")
+getMA("2436.tw")
 
-getVAL("4961.tw" , 30)
-MAmovement("4961.tw" , 120)
+getVAL("2436.tw" , 30)
+MAmovement("2436.tw" , 120)

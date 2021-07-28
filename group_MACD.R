@@ -15,7 +15,7 @@ tq_transmute_fun_options()$PerformanceAnalytics
 
 #data("FANG")
 ########################FANG化##########################
-HU <- getSymbols("3006.tw", auto.assign = FALSE, from = "2017-01-01")
+HU <- getSymbols("2436.tw", auto.assign = FALSE, from = "2017-01-01")
 HU <- HU[(rowSums(is.na(HU)) == 0), ]
 HU <- tail(HU, n = 100)
 HU <- round(HU, digits = 2)
@@ -24,7 +24,7 @@ HU <- cbind(date = rownames(HU), HU)
 names = gsub("^........(.*$)", "\\1", names(HU))#點數等於字數
 names(HU) <- tolower(names)
 rownames(HU) <- 1:nrow(HU)
-HU <- cbind(symbol = "晶豪科", HU)
+HU <- cbind(symbol = "偉詮電", HU)
 HU$date <- as.Date(HU$date, format =  "%Y-%m-%d")
 HU <- as.tibble(HU)
 
@@ -109,7 +109,7 @@ rr <- cbind(symbol = "義隆", rr)
 rr$date <- as.Date(rr$date, format =  "%Y-%m-%d")
 rr <- as.tibble(rr)
 
-FANG <- rbind(CG,UD, GG)
+FANG <- rbind(CG)
             #  CC, CG, HU, UD, YY, rr)
 
 FANG_macd <- FANG %>%

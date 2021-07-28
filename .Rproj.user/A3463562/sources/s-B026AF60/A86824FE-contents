@@ -68,7 +68,7 @@ geom_dl(aes(label = label), method = list(dl.combine("first.points", "last.point
 
 COMicdesign <- function(days){
   library(quantmod)
-  icdesign = c("3006.TW", "3014.TW","3035.TW", "3545.TW","3588.TW","4961.TW", "2458.TW")
+  icdesign = c("3006.TW", "3014.TW","3035.TW", "3545.TW","3588.TW","4961.TW", "2458.TW","2436.TW")
   getSymbols(icdesign)
 #  sa<- icdesign[1]"2363.TW"
 #  sb<- icdesign[2]"2379.TW",
@@ -82,7 +82,7 @@ COMicdesign <- function(days){
   sp<- icdesign[5]
   sq<- icdesign[6]
   sz<- icdesign[7]
-
+  sy<- icdesign[8]
 
 #  sa = data.frame(get(sa))
 #  sb = data.frame(get(sb))
@@ -97,6 +97,7 @@ COMicdesign <- function(days){
   sp = data.frame(get(sp))
   sq = data.frame(get(sq))
   sz = data.frame(get(sz))
+  sy = data.frame(get(sy))
 
   names = gsub("^........(.*$)", "\\1", names(`3006.TW`))
 #  names(sa) = names
@@ -111,6 +112,7 @@ COMicdesign <- function(days){
   names(sp) = names
   names(sq) = names
   names(sz) = names
+  names(sy) = names
 
   # rbind into one dataframe
 #  sa$label = "sa"
@@ -125,8 +127,9 @@ COMicdesign <- function(days){
   sp$label = "通嘉"
   sq$label = "天鈺"
   sz$label = "義隆"
+  sy$label = "偉詮電"
 
-  df = rbind(tail(sh, n = days), tail(si, n = days), tail(sk, n = days),tail(so, n = days),tail(sp, n = days),tail(sq, n = days),tail(sz, n = days))
+  df = rbind(tail(sh, n = days), tail(si, n = days), tail(sk, n = days),tail(so, n = days),tail(sp, n = days),tail(sq, n = days),tail(sz, n = days),tail(sy, n = days))
 
 
   # Packages
