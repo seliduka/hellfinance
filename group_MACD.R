@@ -109,8 +109,7 @@ rr <- cbind(symbol = "義隆", rr)
 rr$date <- as.Date(rr$date, format =  "%Y-%m-%d")
 rr <- as.tibble(rr)
 
-FANG <- rbind(CG)
-            #  CC, CG, HU, UD, YY, rr)
+FANG <- rbind(CC, CG, HU, UD, YY, rr)
 
 FANG_macd <- FANG %>%
   group_by(symbol) %>%

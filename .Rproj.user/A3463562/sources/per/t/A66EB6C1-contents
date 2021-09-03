@@ -25,7 +25,9 @@ FANG_macd <- HU %>%
             maType     = SMA) %>%
   mutate(diff = macd - signal) %>%
   select(-(open:volume))
-FANG_macd$close = (HU$close-min(HU$close))/500
+adjust_c = (HU$close-min(HU$close))/500
+FANG_macd$close = adjust_c
+
 
 FANG_macd %>%
   filter(date >= as_date("2021-01-01")) %>%
@@ -40,4 +42,6 @@ FANG_macd %>%
        y = "MACD", x = "", color = "") +
   theme_tq() +
   scale_color_tq()
+
+cor(tail(FANG_macd$signal, n = 20),tail(FANG_macd$close, n = 20))
 
